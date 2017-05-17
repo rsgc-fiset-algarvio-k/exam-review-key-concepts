@@ -22,7 +22,10 @@ import PlaygroundSupport
 //: ## Your code starts here
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
-
+for x in stride(from: 100, to: 0, by: -5) {
+canvas.rotate(by: x)
+canvas.drawText(message: "undertones", size: 70, x: 10, y: 400)
+}
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.

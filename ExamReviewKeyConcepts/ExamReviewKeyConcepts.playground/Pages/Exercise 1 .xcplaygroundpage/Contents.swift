@@ -22,7 +22,14 @@ import PlaygroundSupport
 //: ## Your code starts here
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
-
+canvas.fillColor = Color(hue: 190, saturation: 100, brightness: 100, alpha: 100)
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 600)
+canvas.textColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: 25)
+for x in stride(from: 0, to: 400, by: 6) {
+    canvas.drawText(message: "blur", size: 200, x: 15, y: 400 - x)
+}
+canvas.textColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: 100)
+canvas.drawText(message: "blur", size: 200, x: 15, y: 375)
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
