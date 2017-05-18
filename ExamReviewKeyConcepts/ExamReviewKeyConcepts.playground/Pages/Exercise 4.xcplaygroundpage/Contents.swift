@@ -22,7 +22,26 @@ import PlaygroundSupport
 //: ## Your code starts here
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
-
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 400)
+canvas.fillColor = Color.green
+canvas.drawShapesWithBorders = false
+canvas.drawShapesWithFill = true
+for x in stride(from: 0, through: 400, by: 40) {
+    for y in stride(from: 0, through: 400, by: 40) {
+        if x + y <= 400 {
+            canvas.fillColor = Color.white
+        } else {
+            canvas.fillColor = Color.green
+        }
+    canvas.drawEllipse(centreX: x, centreY: y, width: 35, height: 35)
+    }
+}
+canvas.fillColor = Color.green
+for x in stride(from: 0, through: 400, by: 40) {
+    canvas.drawEllipse(centreX: x, centreY: 0, width: 35, height: 35)
+    canvas.drawEllipse(centreX: 0, centreY: x, width: 35, height: 35)
+}
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 400, width: 400, height: 200)
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.

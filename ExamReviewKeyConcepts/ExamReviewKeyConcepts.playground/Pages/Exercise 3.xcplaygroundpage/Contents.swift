@@ -22,7 +22,16 @@ import PlaygroundSupport
 //: ## Your code starts here
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
+canvas.fillColor = Color(hue: 0, saturation: 100, brightness: 100, alpha: 100)
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 600)
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
+//for x in stride(from: 0, to: 100, by: 5) {
+canvas.borderColor = Color.black
+canvas.defaultBorderWidth = 400/29
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 200, height: 200)
 
+//}
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
